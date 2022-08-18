@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import axios from "axios";
 
 function Login() {
@@ -38,9 +38,10 @@ function Login() {
         <div className="d-flex align-items-center" style={{ height: '100vh' }}>
             <div style={{ width: '100%' }}>
                 <div className="row justify-content-center">
-                <div className="col-md-6">
+                <div className="col-md-4"></div>
+                <div className="col-md-4">
                 <div className="card text-bg-light mb-3" style={{ width: '20rem' }}>
-<div className="card-header">Login</div>
+<div className="card-header bg-primary text-white"><h5>INICIAR SESIÓN</h5></div>
 <div className="card-body">
         <form onSubmit={loginUser}>
         <div className="mb-3">
@@ -58,12 +59,17 @@ function Login() {
         }
         </div>
         <div className="mb-3">
-        <button className="btn btn-primary" type="Submit">Sign In</button>
+        <button className="btn btn-success" type="Submit">Iniciar sesión</button>
+        </div>
+        <div className="mb-3 d-flex justify-content-between">
+            <p>¿No tienes una cuenta? </p>
+        <Link to="/register" className="text-muted">Crear cuenta</Link>
         </div>
         </form>
 </div>
 </div>
                     </div>
+                    <div className="col-md-4"></div>
                     </div>
             </div>
 

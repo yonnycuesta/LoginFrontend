@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import axios from "axios";
 
 
@@ -35,7 +35,7 @@ function Register() {
 
         await axios.post('http://127.0.0.1:8000/api/register', formData)
         .then(()=>{
-            navigate('/login');
+            navigate('/');
         }).catch((error)=>{
            setValidation(error.response.data.errors);
         })
@@ -49,7 +49,7 @@ function Register() {
                     <div className="col-md-6">
                     <div className="card text-bg-light mb-3" style={{ width: '28rem' }}>
   <div className="card-header bg-primary text-white">
-    <h4>Registrarse</h4>
+    <h4>CREAR CUENTA</h4>
   </div>
   <div className="card-body">
     <form onSubmit={createUser}>
@@ -90,6 +90,10 @@ function Register() {
         </div>
         <div className="mb-3">
         <button className="btn btn-success" type="Submit">Registrarse</button>
+        </div>
+        <div className="mb-3 d-flex justify-content-between">
+            <p className="">¿Tienes una cuenta? </p>
+        <Link to="/" className="text-muted">Inicia sesión</Link>
         </div>
        
         </form>

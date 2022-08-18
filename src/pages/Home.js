@@ -35,8 +35,8 @@ function Home() {
                     <div className="row justify-content-center">
                     <div className="col-md-6">
                     <div className="card text-bg-light mb-3" style={{ width: '35rem' }}>
-  <div className="card-header d-grid gap-2"><h5>Listado de usuarios</h5> 
-  <Link to="/register" className="btn btn-primary">Agregar nuevo</Link>
+  <div className="card-header d-grid gap-2"><h5>LISTADO DE USUARIOS</h5> 
+  <Link to="/register" className="btn btn-primary border-0">Agregar nuevo</Link>
     </div>
   <div className="card-body">
     <table className="table text-center">
